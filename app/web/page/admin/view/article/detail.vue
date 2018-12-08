@@ -15,7 +15,7 @@
   }
 </style>
 <script type="text/babel">
-  import { SET_ARTICLE_DETAIL } from '../store/mutation-type';
+  import { SET_ARTICLE_DETAIL } from '../../store/mutation-type';
   export default {
     methods: {
       fetchApi({ $store, $router }) {

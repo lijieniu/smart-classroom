@@ -2,8 +2,16 @@ export default {
   menu: {
     home: 'Home',
     articlemanage: 'Article Manage',
+    actualnumber: 'Actual Number',
+    absencenumber: 'Absence Number',
+    leavenumber: 'Leave Number',
+    summarymanage: 'Summary Manage',
+    daysummary: 'Day Summary',
+    weeksummary: 'Week Summary',
+    monthsummary: 'Month Summary',
     articlequery: 'Article Query',
-    articleadd: 'Article Add'
+    articleadd: 'Article Add',
+    attendancemanage: 'Attendance Manage'
   },
   lang: {
     href: '/admin?locale=cn',

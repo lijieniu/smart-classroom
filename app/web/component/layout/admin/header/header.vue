@@ -53,7 +53,7 @@ export default {
       collapse: false,
       site: {
         name: "Admin",
-        description: "Egg-Element-Admin"
+        description: "智慧课堂"
       }
     };
   },
