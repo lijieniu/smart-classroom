@@ -93,6 +93,7 @@
 </template>
 
 <script>
+    import { SET_ARTICLE_LIST, DELETE_ARTICLE } from '../../store/mutation-type';
     export default {
         name: "absencenumber",
         data() {
