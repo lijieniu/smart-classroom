@@ -44,16 +44,37 @@
         </div>
       </div>
     </el-col>
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
+      <div :style="{width: '300px', height: '300px'}" id="myEcharts">图表</div>
+    </el-col>
   </el-row>
 </template>
 
 <script>
+
 export default {
   components: {},
   methods: {
     handleSetLineChartData(type) {
       this.$emit("handleSetLineChartData", type);
     }
+  },
+  mounted() {
+    let myEcharts = this.$echarts.init(document.getElementById('myEcharts'));
+    myEcharts.setOption({
+      title: {
+        text: '我的图表'
+      },
+      xAxis: {
+        data: ['a', 'b']
+      },
+      yAxis: {},
+      series: {
+        name: '测试',
+        type: 'bar',
+        data: [1, 2]
+      }
+    });
   }
 };
 </script>

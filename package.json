@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "cross-env": "^5.0.0",
+    "echarts": "^4.2.0-rc.2",
     "egg": "^2.1.0",
     "egg-bin": "^4.3.7",
     "egg-cors": "^2.0.0",
@@ -59,9 +60,7 @@
   "ci": {
     "version": "8, 10"
   },
-  "repository": {
-    
-  },
+  "repository": {},
   "author": "niu",
   "license": "MIT",
   "homepage": "https://github.com/easy-team/egg-vue-webpack-boilerplate"

@@ -3,12 +3,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Dashboard from '../view/dashboard/index.vue';
 import ArticleList from '../view/article/list.vue';
-import AbsenseNumber from '../attendance/absencenumber.vue';
-import ActualNumber from '../attendance/actualnumber.vue';
-import LeaveNumber from '../attendance/leavenumber.vue';
-import DaySummary from '../summary/daysummary.vue';
-import MonthSummary from '../summary/monthsummary.vue';
-import WeekSummary from '../summary/weeksummary.vue';
 
 Vue.use(VueRouter);
 
@@ -33,30 +27,30 @@ export default function createRouter() {
         path: '/article/detail/:id',
         component: () => import('../view/article/detail.vue')
       },
-        {
-          path:'/attendance/absence',
-            component:AbsenseNumber
-        },
-        {
-          path:'/attendance/actual',
-            component:ActualNumber
-        },
-        {
-          path:'/attendance/leave',
-            component:LeaveNumber
-        },
-        {
-          path:'/summary/day',
-            component:DaySummary
-        },
-        {
-          path:'/summary/month',
-            component:MonthSummary
-        },
-        {
-          path:'/summary/week',
-            component:WeekSummary
-        },
+      {
+        path:'/attendance/absence',
+        component: () => import('../view/attendance/absencenumber.vue')
+      },
+      {
+        path:'/attendance/actual',
+        component: () => import('../view/attendance/actualnumber.vue')
+      },
+      {
+        path:'/attendance/leave',
+        component: () => import('../view/attendance/leavenumber.vue')
+      },
+      {
+        path:'/summary/day',
+        component: () => import('../view/summary/daysummary.vue')
+      },
+      {
+        path:'/summary/month',
+        component: () => import('../view/summary/monthsummary.vue')
+      },
+      {
+        path:'/summary/week',
+        component: () => import('../view/summary/weeksummary.vue')
+      },
       {
         path: '*', component: () => import('../view/notfound.vue')
       }

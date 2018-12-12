@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import { sync } from 'vuex-router-sync';
 import VueI18n from 'vue-i18n';
+import ECharts from 'echarts';
+
+Vue.prototype.$echarts = ECharts;
 
 export default class App {
   constructor(config) {

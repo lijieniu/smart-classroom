@@ -95,6 +95,7 @@
 
 </style>
 <script type="babel">
+import { SET_ARTICLE_LIST, DELETE_ARTICLE } from '../../store/mutation-type';
 export default {
   components: {},
   data() {
