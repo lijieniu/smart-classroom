@@ -16,6 +16,10 @@ export default function createRouter() {
         component: Dashboard
       },
       {
+        path: '/user',
+        component: () => import('../view/user/index.vue')
+      },
+      {
         path: '/article/list',
         component: ArticleList
       },

@@ -2,6 +2,7 @@
 export default {
   menu: {
     home: '首页',
+    usermanage: '用户管理',
     attendancemanage: '考勤管理',
     actualnumber: '实到人数',
     absencenumber: '缺勤人数',
