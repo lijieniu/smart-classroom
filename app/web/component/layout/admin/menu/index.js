@@ -11,7 +11,7 @@ const menu = {
   },
   attendance: {
     name: 'menu.attendancemanage',
-    icon: 'el-icon-menu',
+    icon: 'el-icon-bell',
     children: {
       actualnumber: {
         name: 'menu.actualnumber',
@@ -29,7 +29,7 @@ const menu = {
   },
   summary: {
     name: 'menu.summarymanage',
-    icon: 'el-icon-menu',
+    icon: 'el-icon-date',
     children: {
       daysummary: {
         name: 'menu.daysummary',

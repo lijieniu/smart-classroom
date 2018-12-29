@@ -1,10 +1,10 @@
 <template>
     <div>
-        <p>请假人数</p>
+        <p>学生管理</p>
         <div class="search">
             <el-row class="clear">
-                <label> 标题:</label><el-input class="search-input" clearable v-model="q.title" placeholder="关键字"></el-input>
-                <label> 分类:</label><el-select  v-model="q.categoryId" placeholder="分类">
+                <label> 姓名:</label><el-input class="search-input" clearable v-model="q.title" placeholder="学生姓名"></el-input>
+                <label> 班级:</label><el-select  v-model="q.categoryId" placeholder="班级">
                 <el-option v-for="item in categories"
                            :key="item.id"
                            :label="item.name"
@@ -19,11 +19,10 @@
                 </el-option>
             </el-select>
                 <el-button class="search-button" type="primary" @click="query()">查询</el-button>
-                <el-button class="add-button" type="success" @click="write()">写文章</el-button>
             </el-row>
         </div>
         <el-table
-                :data="articleList"
+                :data="userList"
                 v-loading="loading"
                 element-loading-text="拼命加载中"
                 border
@@ -34,24 +33,18 @@
                     width="55">
             </el-table-column>
             <el-table-column
-                    prop="title"
-                    label="标题">
-                <template slot-scope="props">
-                    <router-link :to="'/article/detail/'+ props.row.id">{{props.row.title}}</router-link>
-                </template>
+                    prop="s_no"
+                    label="学号">
             </el-table-column>
             <el-table-column
-                    prop="hits"
-                    label="点赞"
-                    width="100">
+                    prop="s_name"
+                    label="姓名"
+                    width="200">
             </el-table-column>
             <el-table-column
-                    prop="status"
-                    label="状态"
-                    width="100">
-                <template slot-scope="props">
-                    <span v-text="props.row.status == 1 ? '已发布' : '草稿'"></span>
-                </template>
+                    prop="s_class"
+                    label="班级"
+                    width="200">
             </el-table-column>
             <el-table-column
                     label="操作"
@@ -109,7 +102,39 @@ export default {
       //请求时的loading效果
       loading: false,
       //批量选择数组
-      batchSelectArray: []
+      batchSelectArray: [],
+      userList: [
+        {
+          id: '1',
+          s_no: '201801',
+          s_name: 'tom',
+          s_class: '计算机一班',
+        },
+        {
+          id: '1',
+          s_no: '201802',
+          s_name: 'lily',
+          s_class: '计算机二班',
+        },
+        {
+          id: '1',
+          s_no: '201803',
+          s_name: '张三',
+          s_class: '计算机一班',
+        },
+        {
+          id: '1',
+          s_no: '201804',
+          s_name: '李四',
+          s_class: '计算机一班',
+        },
+        {
+          id: '1',
+          s_no: '201805',
+          s_name: '王二',
+          s_class: '计算机一班',
+        }
+      ]
     };
   },
   methods: {
@@ -178,9 +203,6 @@ export default {
     total() {
       return this.$store.state.articleTotal;
     },
-    articleList() {
-      return this.$store.state.articleList;
-    }
   }
 };
 </script>

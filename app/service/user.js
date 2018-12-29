@@ -15,6 +15,14 @@ class UserService extends Service {
         let userList = this.collection.getPager(query);
         return userList;
     }
+    async createUser(user) {
+        return this.collection.add(user);
+    }
+    async findUserBySNo(student_no) {
+        const query = new Query();
+        query.where.student_no = student_no;
+        return this.collection.query(query);
+    }
 }
 
 module.exports = UserService;
