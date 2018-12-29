@@ -6,7 +6,7 @@ module.exports = class AdminController extends egg.Controller {
     await ctx.renderClient('admin.js', { ctx, url });
   }
   async list(ctx) {
-    this.ctx.body = await ctx.service.article.getArtilceList(ctx.request.body);
+    this.ctx.body = await ctx.service.article.getArtilceList(ctx.request.bdoy);
   }
   async add(ctx) {
     ctx.body = await this.service.article.saveArticle(ctx.request.body);

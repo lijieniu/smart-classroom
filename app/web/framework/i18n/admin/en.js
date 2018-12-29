@@ -1,6 +1,7 @@
 export default {
   menu: {
     home: 'Home',
+    usermanage: 'User Manage',
     articlemanage: 'Article Manage',
     actualnumber: 'Actual Number',
     absencenumber: 'Absence Number',

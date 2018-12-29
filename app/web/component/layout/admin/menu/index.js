@@ -4,6 +4,11 @@ const menu = {
     path: '/',
     icon: 'el-icon-menu',
   },
+  user: {
+    name: 'menu.usermanage',
+    icon: 'el-icon-menu',
+    path: '/user'
+  },
   attendance: {
     name: 'menu.attendancemanage',
     icon: 'el-icon-menu',

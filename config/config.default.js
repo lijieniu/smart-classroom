@@ -29,6 +29,18 @@ module.exports = app => {
     'access'
   ];
 
+  exports.mysql = {
+    client: {
+      host: '',
+      port: '',
+      user: '',
+      password: '',
+      database: ''
+    },
+    app: true,
+    agent: false
+  };
+
   exports.security = {
     csrf: {
       ignoreJSON: false,

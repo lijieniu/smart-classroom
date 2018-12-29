@@ -4,7 +4,7 @@ const DBSymbol = Symbol('Application#db');
 module.exports = {
   get db() {
     if (!this[DBSymbol]) {
-      this[DBSymbol] = Factory();
+      this[DBSymbol] = Factory('mysql', this.mysql);
     }
     return this[DBSymbol];
   },

@@ -1,6 +1,6 @@
 # smart-classroom
 
-智慧课堂
+egg demo
 
 ## QuickStart
 
