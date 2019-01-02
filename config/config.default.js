@@ -26,8 +26,13 @@ module.exports = app => {
 
   exports.middleware = [
     'locals',
-    'access'
+    'access',
+    'errorHandler'
   ];
+
+  exports.errorHandler = {
+    match: '/admin/api'
+  }
 
   exports.mysql = {
     client: {
@@ -35,7 +40,7 @@ module.exports = app => {
       port: '',
       user: '',
       password: '',
-      database: ''
+      database: 'smartyclass'
     },
     app: true,
     agent: false
@@ -43,10 +48,9 @@ module.exports = app => {
 
   exports.security = {
     csrf: {
-      ignoreJSON: false,
-      cookieName: 'csrfToken',
+      // cookieName: 'csrfToken',
       // sessionName: 'csrfToken',
-      // headerName: 'x-csrf-token'
+      headerName: 'x-csrf-token'
     },
     xframe: {
       enable: false,

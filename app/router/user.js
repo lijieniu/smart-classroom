@@ -1,4 +1,6 @@
 module.exports = app => {
     const { router, controller } = app;
-    router.get('/admin/api/user/list', controller.user.list);
+    router.resources('user', '/admin/api/users', controller.user);
+    router.post('/user/login', controller.user.login);
+    router.post('/user/register', controller.user.register);
 }
